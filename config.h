@@ -97,7 +97,7 @@ unsigned int tabspaces = 4;
 /* Terminal colors (16 first used in escape sequence) */
 static const char *colorname[] = {
 	/* 8 normal colors */
-	"#141419", //black
+	"#24242a", //black
 	"#fb9fb1", //red
 	"#77c267", //green
 	"#ddb26f", //yellow
@@ -130,7 +130,7 @@ static const char *colorname[] = {
  * foreground, background, cursor, reverse cursor
  */
 
-unsigned int alpha = 0xf8;
+unsigned int alpha = 0xc8;
 unsigned int defaultfg = 7;
 unsigned int defaultbg = 0;
 static unsigned int defaultcs = 256;
@@ -171,14 +171,14 @@ static unsigned int defaultattr = 11;
  */
 static MouseShortcut mshortcuts[] = {
 	/* button               mask            string */
-	{ Button4,              XK_ANY_MOD,     "\031" },
-	{ Button5,              XK_ANY_MOD,     "\005" },
+	{ Button4,              XK_NO_MOD,     "\031" },
+	{ Button5,              XK_NO_MOD,     "\005" },
 };
 
 MouseKey mkeys[] = {
 	/* button               mask            function        argument */
-	{ Button4,              ShiftMask,      kscrollup,      {.i =  1} },
-	{ Button5,              ShiftMask,      kscrolldown,    {.i =  1} },
+	{ Button4,              XK_NO_MOD,      kscrollup,      {.i =  1} },
+	{ Button5,              XK_NO_MOD,      kscrolldown,    {.i =  1} },
 };
 
 /* Internal keyboard shortcuts. */
